@@ -2,11 +2,11 @@ require 'active_support/core_ext'
 
 require 'ransack/configuration'
 
-if defined?(::Mongoid)
-  require 'ransack/adapters/mongoid/ransack/constants'
-else
+# if defined?(::Mongoid)
+#   require 'ransack/adapters/mongoid/ransack/constants'
+# else
   require 'ransack/adapters/active_record/ransack/constants'
-end
+# end
 
 module Ransack
   extend Configuration
@@ -34,9 +34,9 @@ if defined?(::ActiveRecord::Base)
   require 'ransack/adapters/active_record'
 end
 
-if defined?(::Mongoid)
-  require 'ransack/adapters/mongoid/ransack/translate'
-  require 'ransack/adapters/mongoid'
-end
+# if defined?(::Mongoid)
+#   require 'ransack/adapters/mongoid/ransack/translate'
+#   require 'ransack/adapters/mongoid'
+# end
 
 ActionController::Base.helper Ransack::Helpers::FormHelper

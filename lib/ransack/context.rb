@@ -4,9 +4,9 @@ if defined?(::ActiveRecord::Base)
   require 'ransack/adapters/active_record/ransack/visitor'
 end
 
-if defined?(::Mongoid)
-  require 'ransack/adapters/mongoid/ransack/visitor'
-end
+# if defined?(::Mongoid)
+#   require 'ransack/adapters/mongoid/ransack/visitor'
+# end
 
 module Ransack
   class Context
